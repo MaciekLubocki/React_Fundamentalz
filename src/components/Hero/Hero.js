@@ -6,7 +6,7 @@ class Hero extends React.Component {
     return (
     <section className={styles.component}>
         <header className={styles.component}>
-            <h2 className={styles.title}>SpaCe Jurney</h2>
+            <h2 className={styles.title}>{this.props.titleText}</h2>
             <img className={styles.image} src="/src/components/Hero/space.png"></img>
         </header>
     </section>
