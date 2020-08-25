@@ -7,7 +7,7 @@ class Column extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-          <h2 className={styles.title}>{this.props.ikon}</h2> 
+          <div className={styles.column}>{this.props.ikon}</div> 
       </section>
     )
   }
