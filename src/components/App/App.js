@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './App.scss';
 import List from  '../List/List.js';
+import {pageContents, listData} from '../../data/dataStore';
 
 class App extends React.Component {
   render() {
     return (
       <main className={styles.component}>
-        <h3 className={styles.subtitle}>Hello world!</h3>
-        <List title={['Things to do Astakavista BB', <sup key='1'>soon!</sup>]} image={'/src/components/Hero/space.png'}>
-          <p>Ipsilum solorum et nocet primatur. Astra per lorum et nihil es possumus. Gratifix et Majomus. Opex.</p>
-      </List>
+        <h1 className={styles.title}>{pageContents.title}</h1>
+        <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
+        <List {...listData} />
       </main>
     )
   }
