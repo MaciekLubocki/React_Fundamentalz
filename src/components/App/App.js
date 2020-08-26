@@ -11,7 +11,7 @@ class App extends React.Component {
     lists: PropTypes.array,
   }
   render() {
-    const {title, subtitle, lists} = this.props;
+    const {title, subtitle} = this.props;
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
