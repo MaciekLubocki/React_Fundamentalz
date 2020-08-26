@@ -26,12 +26,12 @@ state = {
   
   
   render() {
-    const { title, icon, cards} = this.props;
+    const { title, icon, cards, addCard} = this.props;
     return (
       <section className={styles.component}>
           <h3 className={styles.title}>
             <span className={styles.icon}>
-              <icon name={icon} />
+              <Icon name={icon} />
             </span>
            {title}
           </h3>
@@ -40,9 +40,9 @@ state = {
             <Card key={cardData.id} {...cardData} />
           ))}
         </div>
-        {/* <div className={styles.creator}>
+        <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={addCard} />
-        </div>   */}
+        </div>
       </section>
     );
   }
