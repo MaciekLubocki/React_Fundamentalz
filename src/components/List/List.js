@@ -6,6 +6,7 @@ import Column from  '../Column/Column.js';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Creator from  '../Creator/Creator.js';
+import Icon from  '../Icon/Icon.js';
 
 
 class List extends React.Component {
