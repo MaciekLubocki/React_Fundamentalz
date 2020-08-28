@@ -3,13 +3,13 @@ import styles from './Column.scss';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import Card from '../Card/Card.js';
-import Creator from '../Creator/Creator.js';
+// import Creator from '../Creator/Creator.js';
 import Icon from '../Icon/Icon.js';
 
 class Column extends React.Component {
-  state = {
-    cards: this.props.cards || [],
-  };
+  // state = {
+  //   cards: this.props.cards || [],
+  // };
 
   static propTypes = {
     title: PropTypes.node.isRequired,
@@ -23,7 +23,7 @@ class Column extends React.Component {
   };
 
   render() {
-    const { title, icon, cards, addCard } = this.props;
+    const { title, icon, cards} = this.props;
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
@@ -37,9 +37,9 @@ class Column extends React.Component {
             <Card key={cardData.id} {...cardData} />
           ))}
         </div>
-        <div className={styles.creator}>
+        {/*<div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={addCard} />
-        </div>
+        </div> */}
       </section>
     );
   }
