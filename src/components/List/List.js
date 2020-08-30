@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
-import PropTypes from 'prop-types';
+import PropTypes, {string } from 'prop-types';
 // import Column from '../Column/Column.js';
 import Column from '../Column/ColumnContainer.js';
 import { settings } from '../../data/dataStore';
@@ -10,20 +10,24 @@ import Creator from '../Creator/Creator.js';
 import Container from '../Container/Container';
 
 class List extends React.Component {
-  // state = {
-  //   columns: this.props.columns || [],
-  // };
+  state = {
+    columns: this.props.columns || [],
+  };
 
   static propTypes = {
     title: PropTypes.node.isRequired,
-    description: PropTypes.node,
+    description: string,
     columns: PropTypes.array,
     image: PropTypes.string,
     addColumn: PropTypes.func,
   };
 
+  // static defaultProps = {
+  //   description: settings.defaultListDescription,
+  // };
+
   static defaultProps = {
-    description: settings.defaultListDescription,
+    icon: settings.defaultColumnIcon,
   };
 
   // addColumn(title) {
